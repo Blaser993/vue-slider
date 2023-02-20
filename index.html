@@ -17,15 +17,20 @@
     
                 <!-- SLIDER DI IMMAGINI DEL CAROSELLO -->
                 <div class="container-fluid position-relative px-0">
-                    <div class="image-wrapper col-auto">
+                    
                         
+                    <ol class="image-wrapper col-auto">
+                        
+                        <li v-for="info in slides">
+                            {{info}} 
+                            
+                        </li> 
+                    </ol>
         
-                        <div v-for="info in slides">
-                            {{info}}  
-                        </div> 
                         
                         
-                    </div>
+                        
+                   
                     
                     <!-- COMANDI CAROSELLO -->
                     <div class="container-fluid position-absolute top-50 start-50 translate-middle">
