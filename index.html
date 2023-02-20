@@ -10,48 +10,46 @@
 </head>
 <body>
 
+    <main id="app">
+        <div   class="container-fluid ">
+
+            <div  class="row carusel text-center ">
     
-
-    <div  class="container-fluid ">
-
-        <div class="row carusel text-center ">
-
-            <!-- SLIDER DI IMMAGINI DEL CAROSELLO -->
-            <div class="container-fluid position-relative px-0">
-                <div class="image-wrapper col-auto">
-                    <div  id="app" v-bind="slides">
-                        ciao
-                    </div>
-
-                    <!-- <div class="slide active">
-                        <img class="image" src="./img/01.webp" alt="">
-                        <article>
-                            <h1 class="title">Marvel's Spiderman Miles Morales</h1>
-                            <p class="text">Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</p>
-                        </article>
-                    </div> -->
+                <!-- SLIDER DI IMMAGINI DEL CAROSELLO -->
+                <div class="container-fluid position-relative px-0">
+                    <div class="image-wrapper col-auto">
+                        
+        
+                        <div v-for="info in slides">{{info}}
                     
-                </div>
-                
-                <!-- COMANDI CAROSELLO -->
-                <div class="container-fluid position-absolute top-50 start-50 translate-middle">
-
-                    <div class="icon-wrapper row col-auto justify-content-between">
-
-                        <!-- PULSANTE SINISTRO -->
-                        <div class="col-auto " id="evaristo"><i class="fa-solid fa-chevron-left"></i></div>
-
-                        <!-- PULSANTE DESTRO -->
-                        <div class="col-auto " id="ernesto"><i class="fa-solid fa-chevron-right"></i></div>
+                            
+                        </div> 
+                        
+                        
                     </div>
-
+                    
+                    <!-- COMANDI CAROSELLO -->
+                    <div class="container-fluid position-absolute top-50 start-50 translate-middle">
+    
+                        <div class="icon-wrapper row col-auto justify-content-between">
+    
+                            <!-- PULSANTE SINISTRO -->
+                            <div class="col-auto " id="evaristo"><i class="fa-solid fa-chevron-left"></i></div>
+    
+                            <!-- PULSANTE DESTRO -->
+                            <div class="col-auto " id="ernesto"><i class="fa-solid fa-chevron-right"></i></div>
+                        </div>
+    
+                    </div>
+                
                 </div>
-            
+    
             </div>
-
+    
         </div>
+    </main>
 
-    </div>
+   
 
     
 
