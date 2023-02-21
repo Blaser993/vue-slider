@@ -19,13 +19,20 @@
                 <div class="container-fluid position-relative px-0">
                     
                         
-                    <ol class="image-wrapper col-auto">
+                    <div class="image-wrapper col-auto">
                         
-                        <li v-for="info in slides">
-                            {{info}} 
+                        <!-- questo è un ternario -->
+                        <div v-for="(slide, index) in slides"
+                         class="slide"
+                         :class="index === 0 ? 'active' : ''"
+                         > 
+                            <img :src="slide.image" >
                             
-                        </li> 
-                    </ol>
+                            <h1>{{index}} - {{slide.title}}</h1>
+                            <p>{{slide.text}}</p>    
+                            
+                        </div> 
+                    </div>
         
                         
                         
@@ -38,10 +45,12 @@
                         <div class="icon-wrapper row col-auto justify-content-between">
     
                             <!-- PULSANTE SINISTRO -->
-                            <div class="col-auto " id="evaristo"><i class="fa-solid fa-chevron-left"></i></div>
+                            <div @click="prevSlide"
+                             class="col-auto " id="evaristo"><i class="fa-solid fa-chevron-left"></i></div>
     
                             <!-- PULSANTE DESTRO -->
-                            <div class="col-auto " id="ernesto"><i class="fa-solid fa-chevron-right"></i></div>
+                            <div @click="nextSlide"
+                            class="col-auto " id="ernesto"><i class="fa-solid fa-chevron-right"></i></div>
                         </div>
     
                     </div>
